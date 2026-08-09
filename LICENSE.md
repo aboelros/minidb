@@ -2,7 +2,7 @@ MIT License
 
 Copyright (c) 2026 Mahmoud Aboelros
 Location: Cairo, Egypt
-Contact: mahmoudarnold19.nexora@gmail.com
+Contact: mahmoudaboelros12358@gmail.com
 Instagram: @arnold19i
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -20,7 +20,7 @@ copies or substantial portions of the Software.
 This system was designed, structured, and engineered entirely by:
 - **Lead Developer:** Mahmoud Aboelros (19yo)
 - **Location:** Cairo, Egypt
-- **Email Contact:** [mahmoudarnold19.nexora@gmail.com](mailto:mahmoudarnold19.nexora@gmail.com)
+- **Email Contact:** [mahmoudaboelros12358@gmail.com](mailto:mahmoudaboelros12358@gmail.com)
 - **Connect on Instagram:** [@arnold19i](https://instagram.com/arnold19i)
 
 *All Rights Reserved © 2026 Mahmoud Aboelros*

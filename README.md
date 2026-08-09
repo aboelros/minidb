@@ -41,7 +41,7 @@ A desktop window will open displaying the MiniDB Explorer, allowing you to direc
 This system was designed, structured, and engineered entirely by:
 - **Lead Developer:** Mahmoud Aboelros (19yo)
 - **Location:** Cairo, Egypt
-- **Email Contact:** [mahmoudarnold19.nexora@gmail.com](mailto:mahmoudarnold19.nexora@gmail.com)
+- **Email Contact:** [mahmoudaboelros12358@gmail.com](mailto:mahmoudaboelros12358@gmail.com)
 - **Connect on Instagram:** [@arnold19i](https://instagram.com/arnold19i)
 
 *All Rights Reserved © 2026 Mahmoud Aboelros*
