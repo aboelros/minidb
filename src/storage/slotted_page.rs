@@ -1,6 +1,5 @@
-use super::page::{Page, PAGE_SIZE, RecordId, PageId};
+use super::page::{Page, PAGE_SIZE, RecordId};
 use crate::error::MiniDbError;
-use std::mem;
 
 /// Slotted Page Layout:
 /// ---------------------------------------------------------
@@ -14,7 +13,6 @@ use std::mem;
 /// ---------------------------------------------------------
 /// | Tuple 1 Data | Tuple 0 Data                           |
 /// ---------------------------------------------------------
-
 pub const PAGE_HEADER_SIZE: usize = 12;
 
 pub struct SlottedPage<'a> {

@@ -1,21 +1,26 @@
 use crate::error::MiniDbError;
 use crate::types::Value;
 use crate::storage::page::{PageId, RecordId};
-use super::node::{NodeType, LeafNode, InternalNode};
 
 pub struct BPlusTree {
-    root_page_id: Option<PageId>,
+    _root_page_id: Option<PageId>,
     // Typically takes a BufferPool manager to fetch nodes
+}
+
+impl Default for BPlusTree {
+    fn default() -> Self {
+        Self::new()
+    }
 }
 
 impl BPlusTree {
     pub fn new() -> Self {
         Self {
-            root_page_id: None,
+            _root_page_id: None,
         }
     }
 
-    pub fn insert(&mut self, key: Value, record_id: RecordId) -> Result<(), MiniDbError> {
+    pub fn insert(&mut self, _key: Value, _record_id: RecordId) -> Result<(), MiniDbError> {
         // Pseudo-logic for insertion:
         // 1. If root is None, allocate a new LeafNode page, set as root, insert (key, rid).
         // 2. Otherwise, traverse down to the correct LeafNode.
@@ -26,7 +31,7 @@ impl BPlusTree {
         Ok(())
     }
 
-    pub fn search(&self, key: &Value) -> Result<Option<RecordId>, MiniDbError> {
+    pub fn search(&self, _key: &Value) -> Result<Option<RecordId>, MiniDbError> {
         // Pseudo-logic for exact search:
         // 1. Traverse down InternalNodes using binary search on keys to find the correct child.
         // 2. Once at LeafNode, binary search keys to find exact match.
@@ -34,7 +39,7 @@ impl BPlusTree {
         Ok(None)
     }
 
-    pub fn range_scan(&self, start_key: &Value, end_key: &Value) -> Result<Vec<RecordId>, MiniDbError> {
+    pub fn range_scan(&self, _start_key: &Value, _end_key: &Value) -> Result<Vec<RecordId>, MiniDbError> {
         // Pseudo-logic for range query:
         // 1. Traverse down to the LeafNode containing start_key.
         // 2. Iterate over records in the LeafNode.
@@ -42,7 +47,7 @@ impl BPlusTree {
         Ok(vec![])
     }
     
-    pub fn delete(&mut self, key: &Value) -> Result<(), MiniDbError> {
+    pub fn delete(&mut self, _key: &Value) -> Result<(), MiniDbError> {
         // Pseudo-logic for deletion:
         // 1. Traverse to correct LeafNode.
         // 2. Remove key/record pair.

@@ -2,6 +2,7 @@ use super::Executor;
 use crate::error::MiniDbError;
 use crate::types::Value;
 
+#[allow(dead_code)]
 pub struct DeleteExecutor {
     table_name: String,
     // Typically takes a child executor

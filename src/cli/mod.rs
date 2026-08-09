@@ -27,10 +27,10 @@ pub fn start_repl(_db_path: &PathBuf) -> Result<(), MiniDbError> {
 
     loop {
         print!("minidb> ");
-        stdout.flush().map_err(|e| MiniDbError::IoError(e))?;
+        stdout.flush().map_err(MiniDbError::IoError)?;
 
         let mut input = String::new();
-        stdin.read_line(&mut input).map_err(|e| MiniDbError::IoError(e))?;
+        stdin.read_line(&mut input).map_err(MiniDbError::IoError)?;
 
         let input = input.trim();
 

@@ -1,4 +1,3 @@
-use crate::types::Value;
 
 #[derive(Debug, Clone, PartialEq)]
 pub enum DataType {

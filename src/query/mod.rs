@@ -12,6 +12,12 @@ impl Planner {
     pub fn new() -> Self {
         Self
     }
+}
+
+impl Default for Planner {
+    fn default() -> Self {
+        Self::new()
+    }
 
     pub fn create_logical_plan(&self, stmt: Statement) -> Result<LogicalPlan, MiniDbError> {
         match stmt {

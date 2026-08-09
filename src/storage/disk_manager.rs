@@ -15,6 +15,7 @@ impl DiskManager {
             .read(true)
             .write(true)
             .create(true)
+            .truncate(false)
             .open(path)?;
         
         let file_len = file.metadata()?.len();

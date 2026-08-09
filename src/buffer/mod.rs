@@ -5,6 +5,7 @@ use std::collections::HashMap;
 
 pub type FrameId = usize;
 
+#[allow(dead_code)]
 pub struct BufferPoolManager {
     disk_manager: DiskManager,
     pool_size: usize,
@@ -33,7 +34,7 @@ impl BufferPoolManager {
         }
     }
 
-    pub fn fetch_page(&mut self, page_id: PageId) -> Result<&mut Page, MiniDbError> {
+    pub fn fetch_page(&mut self, _page_id: PageId) -> Result<&mut Page, MiniDbError> {
         // Pseudo-logic:
         // 1. If page is in page_table, increment pin_count, update LRU usage_list, return frame.
         // 2. If page is NOT in page_table:
@@ -45,7 +46,7 @@ impl BufferPoolManager {
         Err(MiniDbError::StorageError("BufferPoolManager::fetch_page not fully implemented".into()))
     }
 
-    pub fn unpin_page(&mut self, page_id: PageId, is_dirty: bool) -> Result<(), MiniDbError> {
+    pub fn unpin_page(&mut self, _page_id: PageId, _is_dirty: bool) -> Result<(), MiniDbError> {
         // Pseudo-logic:
         // 1. Find frame in page_table.
         // 2. Decrement pin_count.
@@ -53,7 +54,7 @@ impl BufferPoolManager {
         Ok(())
     }
 
-    pub fn flush_page(&mut self, page_id: PageId) -> Result<(), MiniDbError> {
+    pub fn flush_page(&mut self, _page_id: PageId) -> Result<(), MiniDbError> {
         // Pseudo-logic:
         // 1. If page is in page_table, force write to disk via disk_manager.
         // 2. Unset dirty flag.

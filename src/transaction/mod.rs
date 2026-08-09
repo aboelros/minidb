@@ -36,6 +36,12 @@ impl TransactionManager {
             next_txn_id: AtomicU32::new(1),
         }
     }
+}
+
+impl Default for TransactionManager {
+    fn default() -> Self {
+        Self::new()
+    }
 
     pub fn begin(&self) -> Transaction {
         let id = self.next_txn_id.fetch_add(1, Ordering::SeqCst);

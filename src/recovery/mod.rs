@@ -1,7 +1,6 @@
 use crate::transaction::TransactionId;
 use crate::storage::page::{PageId, RecordId};
 use crate::error::MiniDbError;
-use std::fs::File;
 
 pub type LSN = u32; // Log Sequence Number
 
@@ -42,6 +41,12 @@ pub struct LogManager {
     // file: File,
 }
 
+impl Default for LogManager {
+    fn default() -> Self {
+        Self::new()
+    }
+}
+
 impl LogManager {
     pub fn new() -> Self {
         Self {
@@ -49,7 +54,7 @@ impl LogManager {
         }
     }
 
-    pub fn append_log_record(&mut self, record: LogRecord) -> Result<LSN, MiniDbError> {
+    pub fn append_log_record(&mut self, _record: LogRecord) -> Result<LSN, MiniDbError> {
         // Pseudo-logic:
         // 1. Assign next_lsn to the record.
         // 2. Serialize the record into the log buffer.

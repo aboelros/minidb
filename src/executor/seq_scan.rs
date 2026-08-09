@@ -2,6 +2,7 @@ use super::Executor;
 use crate::error::MiniDbError;
 use crate::types::Value;
 
+#[allow(dead_code)]
 pub struct SeqScanExecutor {
     table_name: String,
     current_page: u32,

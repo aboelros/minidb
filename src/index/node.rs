@@ -31,6 +31,12 @@ impl InternalNode {
     }
 }
 
+impl Default for InternalNode {
+    fn default() -> Self {
+        Self::new()
+    }
+}
+
 impl LeafNode {
     pub fn new() -> Self {
         Self {
@@ -38,5 +44,11 @@ impl LeafNode {
             records: Vec::with_capacity(MAX_KEYS_PER_NODE),
             next_leaf: None,
         }
+    }
+}
+
+impl Default for LeafNode {
+    fn default() -> Self {
+        Self::new()
     }
 }

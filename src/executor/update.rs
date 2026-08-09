@@ -2,6 +2,7 @@ use super::Executor;
 use crate::error::MiniDbError;
 use crate::types::Value;
 
+#[allow(dead_code)]
 pub struct UpdateExecutor {
     table_name: String,
     // Typically takes a child executor (like SeqScan or IndexScan)
